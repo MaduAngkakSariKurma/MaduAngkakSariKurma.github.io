@@ -3,13 +3,12 @@ $(document).on('click', '.send', function() {
     var input_name = $("#name").val(),
         input_phone = $("#phone").val(),
         input_pembayaran = $("#pembayaran").val(),
-        input_ukuran = $("#ukuran").val(),
         input_description = $("#description").val();
 
     /* Whatsapp Setting */
     var walink = 'https://web.whatsapp.com/send',
         phone = '6285710786069',
-        text = 'Hi admin, Ambil Promo Jas Hujan' + '%0A' + 'Data order Jas Hujan',
+        text = 'Hi admin, Ambil Promo Madu Angkak Sari Kurma' + '%0A' + 'Data order Madu Angkak Sari Kurma',
         text_yes = 'Your order was successfully sent.',
         text_no = 'Data Belum Lengkap, silahkan isi data dengan lengkap';
 
@@ -25,15 +24,14 @@ $(document).on('click', '.send', function() {
     //     return; // Stop further execution
     // }
 
-    if (input_name != "" && input_phone != "" && input_pembayaran != "" && input_ukuran != "" && input_description != "") {
+    if (input_name != "" && input_phone != "" && input_pembayaran != "" && input_description != "") {
         /* Whatsapp URL */
         var checkout_whatsapp = walink + '?phone=' + phone + '&text=' + text + '%0A%0A' +
             '*Nama* : ' + input_name + '%0A' +
             '*No. Whatsapp* : ' + input_phone + '%0A' +
             '*Pembayaran* : ' + input_pembayaran + '%0A' +
-            '*Ukuran* : ' + input_ukuran + '%0A' +
             '*Alamat Lengkap* : ' + input_description + '%0A' +
-            '*Total Pembayaran* : *125 ribu/pcs* ';  // Semicolon was added here
+            '*Total Pembayaran* : * 94 ribu/pcs + ongkir* ';  // Semicolon was added here
 
         /* Whatsapp Window Open */
         window.open(checkout_whatsapp, '_blank');
